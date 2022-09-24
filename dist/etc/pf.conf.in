@@ -1,0 +1,10 @@
+ext_if="<ext_if>"
+ts_if="tailscale0"
+
+set skip on lo0
+scrub in
+
+block in
+pass out
+
+pass in proto tcp to port 22

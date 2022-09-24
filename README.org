@@ -1,17 +1,44 @@
 * system0 - it all starts here
-
-Principles:
-
+`dgit` is an alias for `git` that sets correct git dir and work tree.
+** Principles
 - FreeBSD first
 - repeatable
 - tested
-
+** Setup
 Bootstrap:
 
 #+BEGIN_SRC sh
   fetch -q -o - https://raw.githubusercontent.com/patmaddox/system0/main/bootstrap.mk | make -f -
+#+END_SRC
 
-  # WARNING: This force checks out the branch, and will overwrite any local files
-  # that are also tracked by git
+Check out files locally.
+WARNING: This force checks out the branch, and will overwrite any local files that are also tracked by git
+
+#+BEGIN_SRC sh
   git --git-dir=system0.git --work-tree=. checkout -f main
 #+END_SRC
+
+Build environment:
+
+#+BEGIN_SRC sh
+  make
+#+END_SRC
+
+Test setup:
+
+#+BEGIN_SRC sh
+  make test
+#+END_SRC
+** Ideas
+*** TODO auto-shutdown cron job / service
+I'm running this stuff in the cloud, and I don't want to pay for time that I'm not using.
+
+A simple script could run mtree on the home dir every hour.
+If nothing has changed for N hours, shut down the instance.
+*** TODO Build AWS and EC2 images with zfs-on-root
+I think `freebsd-src/releases` builds them with UFS.
+
+I've written scripts to configure disks and use the cloud console commands.
+Those work, but it might be possible to hook directly into FreeBSD build machinery.
+I don't even have to use Packer to make the base images.
+I can use Packer to configure the base image - or potentially even run this build script.
