@@ -27,9 +27,15 @@ test: test-emacs
 test-emacs: emacs
 	@emacs --batch --load .emacs.d/init.el --eval '(message "emacs OK")'
 
+/etc: /etc/pf.conf /etc/ssh/sshd_config
+	@sudo touch $(.TARGET)
+
 /etc/pf.conf: dist$(.TARGET).in
 	cat dist$(.TARGET).in | sed -e 's/<ext_if>/vtnet0/' | sudo tee $(.TARGET)
 	pfctl -nf $(.TARGET)
+
+/etc/ssh/sshd_config: dist$(.TARGET)
+	sudo cp dist$(.TARGET) $(.TARGET)
 
 check-services:
 	@sysrc pf_enable

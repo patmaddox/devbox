@@ -1,0 +1,6 @@
+AuthorizedKeysFile	.ssh/authorized_keys
+KbdInteractiveAuthentication no
+X11Forwarding no
+AcceptEnv LANG
+AllowAgentForwarding yes
+ClientAliveInterval 420
