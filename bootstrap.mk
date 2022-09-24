@@ -6,10 +6,10 @@ all: system0.git
 # https://github.com/patmaddox/system0.git
 REPO := git@github.com:patmaddox/system0.git
 
-# shouldn't need to check for dir, but for some reason this gets run even ater cloning
 system0.git: $(HOME)/system0.git
 $(HOME)/system0.git: git
 	if [ ! -d $(.TARGET) ]; then git clone --bare $(REPO) $(.TARGET); fi
+	@touch $(.TARGET)
 
 git: /usr/local/bin/git
 /usr/local/bin/git:
