@@ -5,3 +5,9 @@ Principles:
 - FreeBSD first
 - repeatable
 - tested
+
+Bootstrap:
+
+#+BEGIN_SRC sh
+fetch -q -o - https://raw.githubusercontent.com/patmaddox/devbox/main/bootstrap.mk | make -f -
+#+END_SRC

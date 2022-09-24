@@ -1,0 +1,6 @@
+freebsd_instance:
+  image_family: freebsd-13-1
+
+test_task:
+  bootstrap_script: make -f bootstrap.mk REPO="https://github.com/patmaddox/devbox.git"
+  make_script: make
