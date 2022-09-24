@@ -30,6 +30,8 @@ Test setup:
   make test
 #+END_SRC
 ** Ideas
+*** TODO make /jails/<foo>
+Add a make target to quickly bootstrap a jail.
 *** TODO Make magit work with the home dir setup
 *** TODO auto-shutdown cron job / service
 I'm running this stuff in the cloud, and I don't want to pay for time that I'm not using.
