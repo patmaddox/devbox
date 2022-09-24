@@ -27,7 +27,7 @@ alias l='ls -l'
 alias g='egrep -i'
 
 # pat's aliases
-alias dgit='git --git-dir=$HOME/devbox.git --work-tree=$HOME'
+alias dgit='git --git-dir=$HOME/system0.git --work-tree=$HOME'
  
 # # be paranoid
 # alias cp='cp -ip'
