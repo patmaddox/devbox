@@ -1,3 +1,6 @@
 *~
 .ssh
 devbox.git
+.emacs.d/straight/build-cache.el
+.emacs.d/straight/build/*
+.emacs.d/straight/repos/*
