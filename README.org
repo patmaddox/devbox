@@ -1,0 +1,7 @@
+* Pat's dev box
+
+Principles:
+
+- FreeBSD first
+- repeatable
+- tested
