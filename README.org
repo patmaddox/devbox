@@ -12,7 +12,7 @@ Bootstrap:
 #+END_SRC
 
 Check out files locally.
-WARNING: This force checks out the branch, and will overwrite any local files that are also tracked by git
+WARNING: This force checks out the branch, and will overwrite any local files that are also tracked by git.
 
 #+BEGIN_SRC sh
   git --git-dir=system0.git --work-tree=. checkout -f main
