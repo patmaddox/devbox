@@ -14,3 +14,4 @@
 
 ; straight.el packages
 (straight-use-package 'magit)
+(straight-use-package 'elixir-mode)
