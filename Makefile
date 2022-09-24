@@ -4,7 +4,7 @@ all: pkg emacs
 # but this gets me going quickly and is good for experimentation.
 # Plus I don't have to maintain packages for pkg and brew.
 
-.PHONY: pkg emacs
+.PHONY: pkg emacs test test-*
 
 pkg: /usr/local/etc/pkg/repos/FreeBSD.conf
 /usr/local/etc/pkg/repos/FreeBSD.conf:
@@ -14,3 +14,8 @@ pkg: /usr/local/etc/pkg/repos/FreeBSD.conf
 emacs: /usr/local/bin/emacs
 /usr/local/bin/emacs:
 	sudo pkg install -y emacs-nox
+
+test: test-emacs
+
+test-emacs: emacs
+	@emacs --batch --eval '(message "emacs OK")'

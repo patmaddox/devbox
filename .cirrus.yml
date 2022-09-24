@@ -4,3 +4,4 @@ freebsd_instance:
 test_task:
   bootstrap_script: make -f bootstrap.mk REPO="https://github.com/patmaddox/devbox.git"
   make_script: make
+  make_test_script: make test
