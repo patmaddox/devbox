@@ -1,6 +1,13 @@
 *~
-.ssh
-system0.git
+.cshrc
 .emacs.d/straight/build-cache.el
 .emacs.d/straight/build/*
 .emacs.d/straight/repos/*
+.lesshst
+.login
+.login_conf
+.mail_aliases
+.mailrc
+.profile
+.ssh
+system0.git
