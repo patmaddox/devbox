@@ -18,4 +18,4 @@ emacs: /usr/local/bin/emacs
 test: test-emacs
 
 test-emacs: emacs
-	@emacs --batch --eval '(message "emacs OK")'
+	@emacs --batch --load .emacs.d/init.el --eval '(message "emacs OK")'
