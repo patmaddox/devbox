@@ -9,5 +9,9 @@ Principles:
 Bootstrap:
 
 #+BEGIN_SRC sh
-fetch -q -o - https://raw.githubusercontent.com/patmaddox/devbox/main/bootstrap.mk | make -f -
+  fetch -q -o - https://raw.githubusercontent.com/patmaddox/devbox/main/bootstrap.mk | make -f -
+
+  # WARNING: This force checks out the branch, and will overwrite any local files
+  # that are also tracked by git
+  git --git-dir=devbox.git --work-tree=. checkout -f main
 #+END_SRC
