@@ -1,10 +1,10 @@
-all: pkg emacs tailscale check-services
+all: pkg emacs tailscale tmux check-services
 
 # Packages may be better done with a meta package...
 # but this gets me going quickly and is good for experimentation.
 # Plus I don't have to maintain packages for pkg and brew.
 
-.PHONY: pkg emacs
+.PHONY: pkg emacs tailscale tmux
 .PHONY: test test-*
 .PHONY: check-services
 
@@ -21,6 +21,10 @@ tailscale: /usr/local/bin/tailscale
 /usr/local/bin/tailscale:
 	sudo pkg install -y tailscale
 	@sudo sysrc tailscaled_enable="NO"
+
+tmux: /usr/local/bin/tmux
+/usr/local/bin/tmux:
+	sudo pkg install -y tmux
 
 test: test-emacs
 
