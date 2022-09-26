@@ -2,6 +2,7 @@
  ("dash.el" . "0ac1ecf6b56eb67bb81a3cf70f8d4354b5782341")
  ("el-get" . "9a4ab9cc8ae4a9b9a4b232788039cc679a4ba249")
  ("emacs-elixir" . "d495ed87a9c507f5939a51c740f119950c83e2ff")
+ ("emacs-libvterm" . "d6fcd38b9544dd4d05dbe5db10e950043b68de9c")
  ("emacsmirror-mirror" . "7197b7d79520c05e198b824aa2341ea9e621cf9a")
  ("gnu-elpa-mirror" . "ff6193a8961a36340cc4b726793940bd9274dd3e")
  ("magit" . "4ee691cd90a4975b31ba4f3f6fc3ae69a0b0eb62")

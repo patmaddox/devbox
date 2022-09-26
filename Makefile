@@ -13,9 +13,17 @@ pkg: /usr/local/etc/pkg/repos/FreeBSD.conf
 	sudo mkdir -p /usr/local/etc/pkg/repos
 	cat /etc/pkg/FreeBSD.conf | sed -e 's/quarterly/latest/' | sudo tee $(.TARGET) > /dev/null
 
-emacs: /usr/local/bin/emacs
+emacs: /usr/local/bin/emacs cmake libvterm
 /usr/local/bin/emacs:
 	sudo pkg install -y emacs-nox
+
+cmake: /usr/local/bin/cmake
+/usr/local/bin/cmake:
+	sudo pkg install -y cmake
+
+libvterm: /usr/local/lib/libvterm.so
+/usr/local/lib/libvterm.so:
+	sudo pkg install -y devel/libvterm
 
 tailscale: /usr/local/bin/tailscale
 /usr/local/bin/tailscale:

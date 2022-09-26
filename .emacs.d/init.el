@@ -13,5 +13,6 @@
   (load bootstrap-file nil 'nomessage))
 
 ; straight.el packages
-(straight-use-package 'magit)
 (straight-use-package 'elixir-mode)
+(straight-use-package 'magit)
+(straight-use-package 'vterm)
