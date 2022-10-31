@@ -16,3 +16,4 @@
 (straight-use-package 'elixir-mode)
 (straight-use-package 'magit)
 (straight-use-package 'vterm)
+(straight-use-package 'go-mode)

@@ -34,6 +34,10 @@ tmux: /usr/local/bin/tmux
 /usr/local/bin/tmux:
 	sudo pkg install -y tmux
 
+go: /usr/local/bin/go
+/usr/local/bin/go:
+	sudo pkg install -y go
+
 test: test-emacs
 
 test-emacs: emacs
